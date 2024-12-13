@@ -126,7 +126,7 @@ pipeline {
                         dir('enis-app-tp/frontend') {
                             script {
                                 echo 'Building Frontend Docker Image...'
-                                def frontendImage = docker.build('frontend-app')
+                                def frontendImage = docker.build('frontend-app','--no-cache')
                                 echo "Built Image: ${frontendImage.id}"
                             }
                         }
