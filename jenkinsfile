@@ -238,10 +238,10 @@ pipeline {
 		    }
 		}
 	    }
-	}
-
+	}        
         
-	post {
+    }
+    post {
             success {
                 script {
                     def instanceUrl = "http://${EC2_PUBLIC_IP}:81"
@@ -252,8 +252,5 @@ pipeline {
                 echo "The pipeline failed. Please check the logs for details."
             }
         }
-        
-        
-    }
 }
 
