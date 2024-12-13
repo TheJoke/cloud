@@ -93,9 +93,7 @@ pipeline {
 
                         // Update the HOST in the DATABASES section
                         sh """
-                            sed -i "/'HOST':/c\\
-                            'HOST': '${RDS_ENDPOINT}',"
-                            settings.py
+                        sed -i "/'HOST':/c\\        'HOST': '${RDS_ENDPOINT}'," settings.py
                         """
 
                         // Verify the DATABASES section after the update
