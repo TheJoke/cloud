@@ -126,8 +126,9 @@ pipeline {
                         dir('enis-app-tp/frontend') {
                             script {
                                 echo 'Building Frontend Docker Image...'
-                                def frontendImage = docker.build('frontend-app','--no-cache')
-                                echo "Built Image: ${frontendImage.id}"
+                                sh '''
+				docker build --no-cache -t frontend-app .
+				'''
                             }
                         }
                     }
@@ -137,9 +138,8 @@ pipeline {
                         dir('enis-app-tp/backend') {
                             script {
                                 echo 'Building Backend Docker Image...'
-                                sh ''' 
-                                docker build --no-cache -t frontend-app .
-                                '''
+                                def backendImage = docker.build('backend-app')
+                                echo "Built Image: ${backendImage.id}"
                             }
                         }
                     }
