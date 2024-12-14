@@ -1,3 +1,11 @@
+/* Set the background color for the entire page */
+body {
+  background-color: #f4f4f9; /* Light grayish-blue for a modern, clean look */
+  font-family: Arial, sans-serif;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
 /* Container for the whole page */
 div {
   font-family: Arial, sans-serif;
@@ -11,36 +19,40 @@ div {
 .notes-section h2 {
   color: #333;
   font-size: 24px;
+  text-align: center; /* Center the title for better alignment */
 }
 
-/* Styles for individual notes - assuming your Note component has some container element */
+/* Styles for individual notes */
 .note {
-  background-color: #f9f9f9;
-  border-left: 5px solid #007bff;
+  background-color: #ffffff; /* Pure white for contrast with page background */
+  border-left: 5px solid #007bff; /* Blue accent for notes */
   margin: 10px 0;
   padding: 10px 15px;
   border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Styles for the form section */
 form {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for better focus */
   max-width: 500px;
-  margin: auto;
+  margin: 2rem auto; /* Center the form with spacing */
 }
 
 form h2 {
   color: #333;
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center; /* Center form heading */
 }
 
 form label {
   font-weight: bold;
   margin-top: 10px;
+  display: block; /* Ensure labels are on their own line */
 }
 
 form input,
@@ -61,8 +73,10 @@ form input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s; /* Smooth transition effect */
 }
 
 form input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker blue on hover */
 }
+
