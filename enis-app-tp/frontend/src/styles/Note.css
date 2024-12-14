@@ -1,10 +1,12 @@
 .note-container {
   padding: 15px; /* Increased padding for a cleaner layout */
-  margin: 20px 0;
+  margin: 20px auto; /* Centers the note by setting horizontal margins to auto */
   border: 1px solid #ccc;
   border-radius: 8px; /* Slightly larger radius for a smoother look */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   background-color: #f9f9f9; /* Light background for contrast */
+  max-width: 600px; /* Limits the width of the notes */
+  text-align: left; /* Keeps text aligned to the left within the note */
 }
 
 .note-title {
