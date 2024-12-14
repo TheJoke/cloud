@@ -1,3 +1,6 @@
+body {
+  background-color: pink; /* Sets a pink background for the entire page */
+}
 .note-container {
   padding: 15px; /* Increased padding for a cleaner layout */
   margin: 20px auto; /* Centers the note by setting horizontal margins to auto */
